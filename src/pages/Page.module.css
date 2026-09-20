@@ -1,0 +1,21 @@
+.page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.panel {
+  width: min(100%, 600px);
+  padding: clamp(24px, 6vw, 48px);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary);
+  border-radius: 16px;
+}
+
+.eyebrow { margin: 0 0 24px; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.description { margin: 16px 0 32px; line-height: 1.6; }
+.status { display: flex; align-items: center; gap: 12px; margin: 0; padding-top: 24px; border-top: 1px solid var(--color-border); line-height: 1.5; }
+.dot { width: 10px; height: 10px; flex-shrink: 0; border-radius: 50%; background: var(--color-primary); }
+.link { display: inline-block; text-underline-offset: 5px; }
