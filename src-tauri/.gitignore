@@ -2,3 +2,8 @@
 # will have compiled files and executables
 /target/
 /gen/schemas
+/resources/backend/*
+!/resources/backend/.gitkeep
+/resources/java-runtime/*
+!/resources/java-runtime/.gitkeep
+/.desktop-test/

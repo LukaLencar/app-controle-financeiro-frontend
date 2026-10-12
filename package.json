@@ -8,10 +8,14 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "tauri": "tauri",
-    "desktop:dev": "tauri dev",
-    "desktop:build:no-bundle": "tauri build --no-bundle"
+    "desktop:dev": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run-tauri.ps1 dev",
+    "desktop:build:no-bundle": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run-tauri.ps1 build --no-bundle",
+    "desktop:prepare": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/prepare-desktop.ps1",
+    "desktop:dev:integrated": "npm run desktop:prepare && npm run desktop:dev",
+    "desktop:package": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/package-desktop.ps1"
   },
   "dependencies": {
+    "@tauri-apps/api": "2.12.3",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "react-router-dom": "7.18.3"
