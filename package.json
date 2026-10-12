@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "desktop:dev": "tauri dev",
+    "desktop:build:no-bundle": "tauri build --no-bundle"
   },
   "dependencies": {
     "react": "19.3.0",
@@ -14,6 +17,7 @@
     "react-router-dom": "7.18.3"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "2.12.2",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.1",
